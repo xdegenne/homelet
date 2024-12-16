@@ -1,119 +1,282 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aide en Ligne - Homelet</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #AAA;
-        }
-        p, ul {
-            margin: 10px 0;
-        }
-        ul {
-            padding-left: 20px;
-            list-style: disc;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .note {
-            background: #eef9ff;
-            padding: 10px;
-            border-left: 4px solid #007BFF;
-            margin: 10px 0;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      main {
+        max-width: 800px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2,
+      h3 {
+        color: #aaa;
+      }
+      p,
+      ul {
+        margin: 10px 0;
+      }
+      ul {
+        padding-left: 20px;
+        list-style: disc;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .note {
+        background: #eef9ff;
+        padding: 10px;
+        border-left: 4px solid #007bff;
+        margin: 10px 0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Aide en Ligne - Homelet</h1>
-        <p>Tout ce dont vous avez besoin pour utiliser l'application.</p>
+      <h1>Aide en Ligne - Homelet</h1>
+      <p>Tout ce dont vous avez besoin pour utiliser l'application.</p>
     </header>
     <main>
-        <h2>Table des Matières</h2>
-        <ul>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#premiers-pas">Premiers Pas</a></li>
-            <li><a href="#fonctionnalites-principales">Fonctionnalités Principales</a></li>
-            <li><a href="#questions-frequentes">Questions Fréquentes</a></li>
-            <li><a href="#support">Support et Contact</a></li>
-        </ul>
+      <h1 id="table-des-matieres">Table des Matières</h1>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#premiers-pas">Premiers Pas</a></li>
+        <li>
+          <a href="#fonctionnalites-principales">Fonctionnalités Principales</a>
+          <ul>
+            <li>
+              <a href="#organisation-des-projets">Organisation des Projets</a>
+            </li>
+            <li>
+              <a href="#modes-de-scenes">Modes de Scènes</a>
+              <ul>
+                <li><a href="#mode-lecture">Mode Lecture</a></li>
+                <li><a href="#mode-doublage">Mode Doublage</a></li>
+                <li><a href="#mode-edition">Mode Édition</a></li>
+              </ul>
+            </li>
+            <li><a href="#preferences">Préférences</a></li>
+          </ul>
+        </li>
+        <li><a href="#questions-frequentes">Questions Fréquentes</a></li>
+        <li><a href="#support-et-contact">Support et Contact</a></li>
+      </ul>
 
-        <h2 id="introduction">Introduction</h2>
-        <p>Bienvenue dans Homelet ! Cette application a été conçue pour simplifier l'apprentissage des textes pour les acteurs. Elle vous permet d'enregistrer, partager et répéter vos répliques en toute simplicité.</p>
+      <h2 id="introduction">Introduction</h2>
+      <p>
+        Bienvenue dans Homelet ! Cette application a été conçue pour simplifier
+        l'apprentissage des textes pour les acteurs. Elle vous permet
+        d'enregistrer, partager et répéter vos répliques en toute simplicité.
+      </p>
+      <p>
+        Cette application peut être considérée comme un magnétophone amélioré et
+        collaboratif destiné à un public d'acteurs ou de toute personne ayant
+        besoin d'apprendre et de répéter les répliques d'une œuvre (pièce de
+        théâtre, film ...).
+      </p>
+      <p>Les principes de base sont :</p>
+      <ul>
+        <li>
+          Un acteur initie un projet et enregistre toutes les répliques de tous
+          les personnages.
+        </li>
+        <li>
+          Il partage ce projet pour permettre à d'autres acteurs d'enregistrer
+          leurs propres répliques (le doublage).
+        </li>
+        <li>
+          Les différents doublages se combinent pour former une distribution.
+        </li>
+        <li>
+          Chacun des acteurs peut alors répéter ses propres répliques en faisant
+          jouer les répliques des autres personnages doublées par les autres
+          acteurs.
+        </li>
+      </ul>
 
-        <h2 id="premiers-pas">Premiers Pas</h2>
-        <p>Pour commencer à utiliser Homelet, suivez ces étapes :</p>
-        <ul>
-            <li><strong>Installation :</strong> Téléchargez l'application depuis [Android/iOS Store].</li>
-            <li><strong>Création d'un Compte :</strong> Connectez-vous ou inscrivez-vous pour accéder à toutes les fonctionnalités.</li>
-            <li><strong>Création de Projets :</strong> Créez votre premier projet pour organiser vos répliques par scène.</li>
-        </ul>
+      <h2 id="premiers-pas">Premiers Pas</h2>
+      <p>Pour commencer à utiliser Homelet, suivez ces étapes :</p>
+      <ul>
+        <li>
+          <strong>Installation :</strong> Téléchargez l'application depuis
+          [Android/iOS Store].
+        </li>
+        <li>
+          <strong>Création d'un Compte :</strong> Connectez-vous avec votre
+          compte Google.
+        </li>
+        <li>
+          <strong>Création de Projets :</strong> Créez votre premier projet pour
+          organiser vos répliques par scène.
+        </li>
+      </ul>
 
-        <h2 id="fonctionnalites-principales">Fonctionnalités Principales</h2>
-        <h3>1. Organisation des Projets</h3>
-        <p>Chaque pièce ou œuvre est structurée en projets. Voici comment les organiser :</p>
-        <ul>
-            <li><strong>Ajouter un Projet :</strong> Appuyez sur le bouton "Créer un Projet".</li>
-            <li><strong>Gestion des Scènes :</strong> Ajoutez des scènes à vos projets.</li>
-            <li><strong>Attribution des Répliques :</strong> Associez chaque réplique à un personnage.</li>
-        </ul>
+      <h2 id="fonctionnalites-principales">Fonctionnalités Principales</h2>
 
-        <h3>2. Enregistrement Audio</h3>
-        <p>Enregistrez les répliques directement dans l'application :</p>
-        <ul>
-            <li>Accédez à une scène et sélectionnez "Enregistrer".</li>
-            <li>Parlez dans le micro et attribuez la réplique au personnage concerné.</li>
-        </ul>
-        <div class="note">
-            <strong>Astuce :</strong> Utilisez un casque pour une meilleure qualité d'enregistrement.
-        </div>
+      <h3 id="organisation-des-projets">1. Organisation des Projets</h3>
+      <p>Chaque pièce ou œuvre est structurée en projets.</p>
+      <ul>
+        <li>
+          Un <strong>Projet</strong> est constitué d'une ou plusieurs
+          <strong>Scènes</strong>.
+        </li>
+        <li>
+          Un <strong>Scène</strong> contient une ou plusieurs
+          <strong>Répliques</strong> (ou didascalies).
+        </li>
+        <li>Une <strong>Réplique</strong> est associée à un personnage.</li>
+      </ul>
+      <p>
+        Lorsqu'un projet est actif dans l'application et qu'il comporte un ou
+        plusieurs personnages, vous pouvez sélectionner votre personnage (Option
+        "Mon Personnage" dans "Préférences").
+      </p>
+      <p>
+        L'onglet scène fait apparaître le magnétophone, composant principal de
+        l'application. Ses boutons changent en fonction du contexte et des
+        possibilités offertes dans ce contexte. Une pression longue sur les
+        boutons fait apparaître une note explicative (Tooltip) en haut de
+        l'écran. Le même comportement est disponible pour les options dans
+        l'onglet "Préférences".
+      </p>
+      <p>
+        La compréhension du fonctionnement du magnétophone est primordiale pour
+        profiter pleinement des fonctionnalités de l'application. Cela peut
+        paraître compliqué mais il a été pensé pour être simple (peut être juste
+        un coup de main à prendre !).
+      </p>
 
-        <h3>3. Mode Lecture</h3>
-        <p>Le mode lecture vous permet de répéter vos répliques :</p>
-        <ul>
-            <li>Lancez la lecture d'une scène.</li>
-            <li>Les répliques de votre personnage seront mutées automatiquement.</li>
-            <li>Réglez les paramètres de lecture pour ajuster les temps de pause.</li>
-        </ul>
+      <h3 id="modes-de-scenes">2. Modes de Scènes</h3>
+      <p>Il existe 3 modes de scène :</p>
 
-        <h2 id="questions-frequentes">Questions Fréquentes</h2>
-        <h3>1. Comment partager mes répliques avec d'autres acteurs ?</h3>
-        <p>Accédez à un projet et utilisez l'option "Partager". Vous pouvez envoyer vos fichiers audio via e-mail ou messagerie instantanée.</p>
+      <h4 id="mode-lecture">Mode Lecture</h4>
+      <p>
+        Dans ce mode, les répliques sont lues les unes après les autres, dans
+        leur ordre d'apparition dans la scène.
+      </p>
+      <p>
+        Il y a 3 modes de lectures différents que l'on peut choisir dans
+        l'onglet "Préférences / Mode de lecture" :
+      </p>
 
-        <h3>2. Est-il possible d'utiliser Homelet sans connexion Internet ?</h3>
-        <p>Oui, toutes les fonctionnalités principales fonctionnent hors ligne, mais la synchronisation et le partage nécessitent une connexion Internet.</p>
+      <h5 id="mode-lecture-normal">Mode Lecture "Normal"</h5>
+      <p>
+        Dans ce mode, toutes les répliques sont jouées comme un magnétophone
+        classique.
+      </p>
 
-        <h2 id="support">Support et Contact</h2>
-        <p>Besoin d'aide supplémentaire ? Contactez-nous à l'adresse <a href="mailto:xavier.degenne@gmail.com">xavier.degenne@gmail.com</a>.</p>
+      <h5 id="mode-lecture-apprentissage">Mode Lecture "Apprentissage"</h5>
+      <p>
+        Dans ce mode, qui n'a d'intérêt que si vous avez sélectionné un
+        personnage (dans "Préférences / Mon personnage"), la lecture de la scène
+        se met en pause lorsqu'on atteint une réplique de votre personnage. Vous
+        avez alors la possibilité d'écouter la réplique autant de fois que
+        nécessaire. La lecture ne reprendra que lorsque vous le déciderez en
+        cliquant sur "Suivant".
+      </p>
+
+      <h5 id="mode-lecture-italienne">Mode Lecture "Italienne"</h5>
+      <p>
+        Dans ce mode, qui nécessite également que votre personnage soit
+        identifié, la lecture se fait normalement sans interruption, mais les
+        répliques de votre personnage sont remplacées par un silence de la même
+        durée que la réplique (en fait la réplique est jouée mais en
+        silencieux).
+      </p>
+
+      <h4 id="mode-doublage">Mode Doublage</h4>
+      <p>
+        Le mode doublage vous permet d'enregistrer votre propre voix sur les
+        répliques du personnage que vous avez sélectionné pour le projet
+        courant.
+      </p>
+      <p>
+        <strong>Astuce :</strong> Utilisez un casque pour une meilleure qualité
+        d'enregistrement.
+      </p>
+
+      <h4 id="mode-edition">Mode Édition</h4>
+      <p>
+        Le mode édition n'est possible que lorsque vous êtes sur un projet que
+        vous avez créé. Il vous permet d'enregistrer des répliques et par la
+        même occasion de créer des personnages.
+      </p>
+
+      <h3 id="preferences">3. Préférences</h3>
+      <ul>
+        <li>
+          <strong>Mon personnage :</strong> Permet de sélectionner votre
+          personnage pour l'enregistrement des doublages et les modes de lecture
+          spécifiques.
+        </li>
+        <li>
+          <strong>Mode de lecture :</strong> Permet de sélectionner le mode de
+          lecture (Normal, Apprentissage ou Italienne).
+        </li>
+        <li>
+          <strong>Jouer les didascalies :</strong> Active ou désactive la
+          lecture des didascalies.
+        </li>
+        <li>
+          <strong>Vibrer au temps pour moi :</strong> Active une vibration
+          lorsque le magnétophone atteint une réplique de votre personnage.
+        </li>
+        <li>
+          <strong>Attendre avant d'enregistrer :</strong> Active ou désactive
+          l'attente d'une action avant l'enregistrement.
+        </li>
+      </ul>
+
+      <h2 id="questions-frequentes">Questions Fréquentes</h2>
+
+      <h3 id="comment-partager">
+        1. Comment partager mes répliques avec d'autres acteurs ?
+      </h3>
+      <p>Accédez à un projet et utilisez l'option "Partager mes répliques".</p>
+
+      <h3 id="hors-ligne">
+        2. Est-il possible d'utiliser Homelet sans connexion Internet ?
+      </h3>
+      <p>
+        Oui, toutes les fonctionnalités principales fonctionnent hors ligne,
+        mais la synchronisation et le partage nécessitent une connexion
+        Internet.
+      </p>
+
+      <h3 id="confidentialite">
+        3. Quelles informations l'application partage-t-elle me concernant ?
+      </h3>
+      <p>Je vous invite à consulter notre <a href=""../policies/confidentiality_policy.html>politique de confidentialité</a>.</p>
+
+      <h2 id="support-et-contact">Support et Contact</h2>
+      <p>
+        Besoin d'aide supplémentaire ? Contactez-nous à l'adresse
+        <a href="mailto:xavier.degenne@gmail.com">xavier.degenne@gmail.com</a>.
+      </p>
     </main>
-</body>
+  </body>
 </html>
