@@ -56,6 +56,31 @@
     <section>
         <h2>Collecte de données</h2>
         <p>Nous ne collectons aucune donnée personnelle identifiable via cette application. Toutes les données générées (par exemple, les enregistrements audio) sont stockés de manière anonyme et ne peuvent en aucun cas êtres associés à une personne en particulier.</p>
+
+        <p>Des données sont téléchargées depuis la base de donnée Firebase vers votre appareil dans les circonstances suivantes :
+            <ul>
+                <li>Lorsque vous sélectionnez un projet distant partagé ou public dans le menu "<i>Ouvrir un projet</i>"</li>
+                <li>Lorsque vous cliquez sur "<i>Raffraichir le projet</i>"</li>
+                <li>Lorsque vous cliquez sur "<i>Choisir les doublages</i>"</li>
+                <li>Lorsque vous sélectionnez un projet, les premières répliques de chaque scène sont téléchargées.</li>
+                <li>Lorsque vous ouvrez une scène, si les audios des répliques n'ont pas encore été téléchargées, elle le sont pour permettre la lecture.</li>
+                <li>Lorsque vous démarrez l'application et qu'un projet distant est ouvert, il est raffaichi automatiquement (si des scènes ou des répliques ont été ajoutées ou modifiées, elles sont récupérées)</li>
+            </ul>
+
+        </p>
+
+        <p>
+            Aucune donnée n'est envoyée dans la base de données Firebase de manière automatique sans action de votre part. Des données sont téléchargées depuis votre appareil vers la base de donnée Firebase dans les circonstances suivantes :
+            <ul>
+              <li>Lorsque vous vous authentifiez, votre pseudo et votre ID anonyme sont enregistrés</li>
+              <li>Lorsque vous modifiez votre pseudo</li>
+              <li>Lorsque vous cliquez sur "<i>Sauvegarder le projet</i>"</li>
+              <li>Lorsque vous cliquez sur "<i>Partager mes doublages</i>"</li>
+              <li>Lorsque vous cliquez sur "<i>Envoyer et Nettoyer</i>" dans l'onglet "<i>Journaux</i>"</li>
+            </ul>
+          </p>
+
+          <p>Les préférences personnelles restent locales à l'appareil et ne sont pas envoyées dans la base de données Firebase. Aucune données concernant votre usage de l'application n'est envoyée dans la base de données Firebase. Seules les données nécessaires aux fonctions collaboratives de l'application sont envoyées dans la base de données Firebase.</p>
     </section>
 
     <section>
