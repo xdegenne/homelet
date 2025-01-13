@@ -22,6 +22,9 @@
         section {
             margin-bottom: 20px;
         }
+        p.sc {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -35,16 +38,6 @@
     </section>
 
     <section>
-        <h2>Utilisation de l'enregistrement audio</h2>
-        <p>Notre application nécessite l'autorisation d'enregistrement audio (<code>RECORD_AUDIO</code>) pour vous permettre d'utiliser la fonctionnalité suivante :
-        <ul>
-            <li>Enregistrement de vos répliques afin de vous aider à apprendre et à pratiquer vos dialogues théâtraux.</li>
-        </ul>
-        </p>
-        <p>Les fichiers audio enregistrés sont partagés sur un stockage sécurisé lorsque vous utilisez l'option "Partager mes doublages".</p>
-    </section>
-
-    <section>
         <h2>Authentification</h2>
         <p>Toutes les fonctionnalités collboratives de l'application (partage de projet, de doublages) ne sont accesssibles qu'après authentification.</p>
         <p>L'authentification est deléguée à l'authentification Firestore qui elle-même se repose sur Google et/ou Apple (en fonction de la nature de votre smartphone: Androïd ou iOS). Votre mot de passe n'est jamais vu par l'application ni par Firestore.</p>
@@ -54,8 +47,25 @@
     </section>
 
     <section>
+        <h2>Utilisation de l'enregistrement audio</h2>
+        <p>Notre application nécessite l'autorisation d'enregistrement audio (<code>RECORD_AUDIO</code>) pour vous permettre d'utiliser les fonctionnalités suivantes :
+        <ul>
+            <li>Enregistrement de vos répliques dans le cadre de la création d'un projet personnel (scéne en mode édition)</li>
+            <li>Enregistrement de vos répliques dans le cadre de votre participation à un project partagé (scène en mode doublage)</li>
+        </ul>
+        </p>
+        <p>En auncun cas l'application ne se permettra d'enregistrer de l'audio dans que vous ne l'ayez décidé et sans que vous n'en soyez informé. Lorsqu'un enregistrement est en cours, vous verrez toujours l'indicateur d'enregistrement qui ressemble à ceci :</p>
+        <p class="sc">
+            <img src="../images/recording.png" alt="Indicateur d'enregistrement" width="200" />
+        </p>
+        <p>Après que vous ayez arrêté l'enregistrement, vous aurez toujours la possibilité de le réécouter et de ne pas le conserver. Si vous décidez de le conserver, il restera local à votre appareil et ne sera partagé que suite à une action volontaire de votre part.</p>
+    </section>
+
+    <section>
         <h2>Collecte de données</h2>
         <p>Nous ne collectons aucune donnée personnelle identifiable via cette application. Toutes les données générées (par exemple, les enregistrements audio) sont stockés de manière anonyme et ne peuvent en aucun cas êtres associés à une personne en particulier.</p>
+
+        <p>L'application utilise une base de données distance sécurisée Firebase pour (et uniquement pour) les fonctionnalités collaboratives de l'application (partage de project, partage de doublages).</p>
 
         <p>Des données sont téléchargées depuis la base de donnée Firebase vers votre appareil dans les circonstances suivantes :
             <ul>
