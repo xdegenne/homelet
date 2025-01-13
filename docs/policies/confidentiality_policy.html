@@ -8,19 +8,30 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
             color: #333;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            p {
+            text-align: center;
+            }
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         p {
             text-align: justify;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #007BFF;
         }
         section {
             margin-bottom: 20px;
@@ -35,88 +46,92 @@
         <h1>Politique de Confidentialité</h1>
     </header>
 
-    <section>
-        <h2>Introduction</h2>
-        <p>Cette politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos informations personnelles lorsque vous utilisez notre application. Nous nous engageons à respecter votre vie privée et à protéger vos données.</p>
-    </section>
+    <main>
 
-    <section>
-        <h2>Authentification</h2>
-        <p>Toutes les fonctionnalités collboratives de l'application (partage de projet, de doublages) ne sont accesssibles qu'après authentification.</p>
-        <p>L'authentification est deléguée à l'authentification Firestore qui elle-même se repose sur Google et/ou Apple (en fonction de la nature de votre smartphone: Androïd ou iOS). Votre mot de passe n'est jamais vu par l'application ni par Firestore.</p>
-        <p>Seule votre adresse email et votre nom complet sont vus par l'application. Ces informations ne sont pas stoquées dans la base de données.</p>
-        <p>Seuls un identifiant unique anonyme Firestore et le pseudo que vous renseignez lors de votre connexion sont enregistrés. Les données que vous publiez éventuellement lorsque vous sauvegardez un projet ou que vous partagez vos doublages sont associées à cet identifiant unique anonyme.</p>
-        <p>Aucune correlation ne peut être faite entre vos enregistrements audios et votre addresse email ou votre nom complet sur la base des données stockées dans la base de données (Firestore).</p>
-    </section>
+        <section>
+            <h2>Introduction</h2>
+            <p>Cette politique de confidentialité décrit comment l'application Homelet collecte, utilise et protége vos informations personnelles lorsque vous l'utilisez. Nous nous engageons à respecter votre vie privée et à protéger vos données.</p>
+        </section>
 
-    <section>
-        <h2>Utilisation de l'enregistrement audio</h2>
-        <p>Notre application nécessite l'autorisation d'enregistrement audio (<code>RECORD_AUDIO</code>) pour vous permettre d'utiliser les fonctionnalités suivantes :
-        <ul>
-            <li>Enregistrement de vos répliques dans le cadre de la création d'un projet personnel (scéne en mode édition)</li>
-            <li>Enregistrement de vos répliques dans le cadre de votre participation à un project partagé (scène en mode doublage)</li>
-        </ul>
-        </p>
-        <p>En auncun cas l'application ne se permettra d'enregistrer de l'audio dans que vous ne l'ayez décidé et sans que vous n'en soyez informé. Lorsqu'un enregistrement est en cours, vous verrez toujours l'indicateur d'enregistrement qui ressemble à ceci :</p>
-        <p class="sc">
-            <img src="../images/recording.png" alt="Indicateur d'enregistrement" width="200" />
-        </p>
-        <p>Après que vous ayez arrêté l'enregistrement, vous aurez toujours la possibilité de le réécouter et de ne pas le conserver. Si vous décidez de le conserver, il restera local à votre appareil et ne sera partagé que suite à une action volontaire de votre part.</p>
-    </section>
+        <section>
+            <h2>Authentification</h2>
+            <p>Toutes les fonctionnalités collboratives de l'application (partage de projet, de doublages) ne sont accesssibles qu'après authentification.</p>
+            <p>L'authentification est deléguée à l'authentification Firestore qui elle-même se repose sur Google et/ou Apple (en fonction de la nature de votre smartphone: Androïd ou iOS). Votre mot de passe n'est jamais vu par l'application ni par Firestore.</p>
+            <p>Seule votre adresse email et votre nom complet sont vus par l'application. Ces informations ne sont pas stoquées dans la base de données.</p>
+            <p>Seuls un identifiant unique anonyme Firestore et le pseudo que vous renseignez lors de votre connexion sont enregistrés. Les données que vous publiez éventuellement lorsque vous sauvegardez un projet ou que vous partagez vos doublages sont associées à cet identifiant unique anonyme.</p>
+            <p>Aucune correlation ne peut être faite entre vos enregistrements audios et votre addresse email ou votre nom complet sur la base des données stockées dans la base de données (Firestore).</p>
+        </section>
 
-    <section>
-        <h2>Collecte de données</h2>
-        <p>Nous ne collectons aucune donnée personnelle identifiable via cette application. Toutes les données générées (par exemple, les enregistrements audio) sont stockés de manière anonyme et ne peuvent en aucun cas êtres associés à une personne en particulier.</p>
-
-        <p>L'application utilise une base de données distance sécurisée Firebase pour (et uniquement pour) les fonctionnalités collaboratives de l'application (partage de project, partage de doublages).</p>
-
-        <p>Des données sont téléchargées depuis la base de donnée Firebase vers votre appareil dans les circonstances suivantes :
+        <section>
+            <h2>Utilisation de l'enregistrement audio</h2>
+            <p>Notre application nécessite l'autorisation d'enregistrement audio (<code>RECORD_AUDIO</code>) pour vous permettre d'utiliser les fonctionnalités suivantes :
             <ul>
-                <li>Lorsque vous sélectionnez un projet distant partagé ou public dans le menu "<i>Ouvrir un projet</i>"</li>
-                <li>Lorsque vous cliquez sur "<i>Raffraichir le projet</i>"</li>
-                <li>Lorsque vous cliquez sur "<i>Choisir les doublages</i>"</li>
-                <li>Lorsque vous sélectionnez un projet, les premières répliques de chaque scène sont téléchargées.</li>
-                <li>Lorsque vous ouvrez une scène, si les audios des répliques n'ont pas encore été téléchargées, elle le sont pour permettre la lecture.</li>
-                <li>Lorsque vous démarrez l'application et qu'un projet distant est ouvert, il est raffaichi automatiquement (si des scènes ou des répliques ont été ajoutées ou modifiées, elles sont récupérées)</li>
+                <li>Enregistrement de vos répliques dans le cadre de la création d'un projet personnel (scéne en mode édition)</li>
+                <li>Enregistrement de vos répliques dans le cadre de votre participation à un project partagé (scène en mode doublage)</li>
             </ul>
+            </p>
+            <p>En auncun cas l'application ne se permettra d'enregistrer de l'audio dans que vous ne l'ayez décidé et sans que vous n'en soyez informé. Lorsqu'un enregistrement est en cours, vous verrez toujours l'indicateur d'enregistrement qui ressemble à ceci :</p>
+            <p class="sc">
+                <img src="../images/recording.png" alt="Indicateur d'enregistrement" width="200" />
+            </p>
+            <p>Après que vous ayez arrêté l'enregistrement, vous aurez toujours la possibilité de le réécouter et de ne pas le conserver. Si vous décidez de le conserver, il restera local à votre appareil et ne sera partagé que suite à une action volontaire de votre part.</p>
+        </section>
 
-        </p>
+        <section>
+            <h2>Collecte de données</h2>
+            <p>Nous ne collectons aucune donnée personnelle identifiable via cette application. Toutes les données générées (par exemple, les enregistrements audio) sont stockés de manière anonyme et ne peuvent en aucun cas êtres associés à une personne en particulier.</p>
 
-        <p>
-            Aucune donnée n'est envoyée dans la base de données Firebase de manière automatique sans action de votre part. Des données sont téléchargées depuis votre appareil vers la base de donnée Firebase dans les circonstances suivantes :
-            <ul>
-              <li>Lorsque vous vous authentifiez, votre pseudo et votre ID anonyme sont enregistrés</li>
-              <li>Lorsque vous modifiez votre pseudo</li>
-              <li>Lorsque vous cliquez sur "<i>Sauvegarder le projet</i>"</li>
-              <li>Lorsque vous cliquez sur "<i>Partager mes doublages</i>"</li>
-              <li>Lorsque vous cliquez sur "<i>Envoyer et Nettoyer</i>" dans l'onglet "<i>Journaux</i>"</li>
-            </ul>
-          </p>
+            <p>L'application utilise une base de données distance sécurisée Firebase pour (et uniquement pour) les fonctionnalités collaboratives de l'application (partage de project, partage de doublages).</p>
 
-          <p>Les préférences personnelles restent locales à l'appareil et ne sont pas envoyées dans la base de données Firebase. Aucune données concernant votre usage de l'application n'est envoyée dans la base de données Firebase. Seules les données nécessaires aux fonctions collaboratives de l'application sont envoyées dans la base de données Firebase.</p>
-    </section>
+            <p>Des données sont téléchargées depuis la base de donnée Firebase vers votre appareil dans les circonstances suivantes :
+                <ul>
+                    <li>Lorsque vous sélectionnez un projet distant partagé ou public dans le menu "<i>Ouvrir un projet</i>"</li>
+                    <li>Lorsque vous cliquez sur "<i>Raffraichir le projet</i>"</li>
+                    <li>Lorsque vous cliquez sur "<i>Choisir les doublages</i>"</li>
+                    <li>Lorsque vous sélectionnez un projet, les premières répliques de chaque scène sont téléchargées.</li>
+                    <li>Lorsque vous ouvrez une scène, si les audios des répliques n'ont pas encore été téléchargées, elle le sont pour permettre la lecture.</li>
+                    <li>Lorsque vous démarrez l'application et qu'un projet distant est ouvert, il est raffaichi automatiquement (si des scènes ou des répliques ont été ajoutées ou modifiées, elles sont récupérées)</li>
+                </ul>
 
-    <section>
-        <h2>Partage de données</h2>
-        <p>Nous ne partageons aucune de vos données avec des tiers. Votre vie privée est notre priorité.</p>
-    </section>
+            </p>
 
-    <section>
-        <h2>Sécurité des données</h2>
-        <p>Les données stoquées dans la base de données (Firestore Database) sont sécurisées. Elles sont complètement inaccessibles à un utilisateur non authentifié.</p>
-        <p>Les données relatives à un project donné (audios, doublages) ne sont accessibles à d'autres utilisateurs authentifiés qu'à partir du moment ou le créateur du project les a invité dans sa "troupe".</p>
-        <p>Un projet non partagé et auquel personne n'est invité à participer n'est accessible que pour son créateur.</p>
-        <p>Nous mettons tout en œuvre pour garantir que vos données restent protégées sur votre appareil. Cependant, il est important de maintenir votre appareil sécurisé et de le protéger contre les accès non autorisés.</p>
-    </section>
+            <p>
+                Aucune donnée n'est envoyée dans la base de données Firebase de manière automatique sans action de votre part. Des données sont téléchargées depuis votre appareil vers la base de donnée Firebase dans les circonstances suivantes :
+                <ul>
+                <li>Lorsque vous vous authentifiez, votre pseudo et votre ID anonyme sont enregistrés</li>
+                <li>Lorsque vous modifiez votre pseudo</li>
+                <li>Lorsque vous cliquez sur "<i>Sauvegarder le projet</i>"</li>
+                <li>Lorsque vous cliquez sur "<i>Partager mes doublages</i>"</li>
+                <li>Lorsque vous cliquez sur "<i>Envoyer et Nettoyer</i>" dans l'onglet "<i>Journaux</i>"</li>
+                </ul>
+            </p>
 
-    <section>
-        <h2>Modifications de cette politique</h2>
-        <p>Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Nous vous encourageons à consulter cette page régulièrement pour rester informé des éventuels changements.</p>
-    </section>
+            <p>Les préférences personnelles restent locales à l'appareil et ne sont pas envoyées dans la base de données Firebase. Aucune données concernant votre usage de l'application n'est envoyée dans la base de données Firebase. Seules les données nécessaires aux fonctions collaboratives de l'application sont envoyées dans la base de données Firebase.</p>
+        </section>
 
-    <section>
-        <h2>Nous contacter</h2>
-        <p>Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, vous pouvez nous contacter à l'adresse suivante : <a href="mailto:homelet.app@gmail.com">homelet.app@gmail.com</a>.</p>
-    </section>
+        <section>
+            <h2>Partage de données</h2>
+            <p>Nous ne partageons aucune de vos données avec des tiers. Votre vie privée est notre priorité.</p>
+        </section>
+
+        <section>
+            <h2>Sécurité des données</h2>
+            <p>Les données stoquées dans la base de données (Firestore Database) sont sécurisées. Elles sont complètement inaccessibles à un utilisateur non authentifié.</p>
+            <p>Les données relatives à un project donné (audios, doublages) ne sont accessibles à d'autres utilisateurs authentifiés qu'à partir du moment ou le créateur du project les a invité dans sa "troupe".</p>
+            <p>Un projet non partagé et auquel personne n'est invité à participer n'est accessible que pour son créateur.</p>
+            <p>Nous mettons tout en œuvre pour garantir que vos données restent protégées sur votre appareil. Cependant, il est important de maintenir votre appareil sécurisé et de le protéger contre les accès non autorisés.</p>
+        </section>
+
+        <section>
+            <h2>Modifications de cette politique</h2>
+            <p>Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Nous vous encourageons à consulter cette page régulièrement pour rester informé des éventuels changements.</p>
+        </section>
+
+        <section>
+            <h2>Nous contacter</h2>
+            <p>Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, vous pouvez nous contacter à l'adresse suivante : <a href="mailto:homelet.app@gmail.com">homelet.app@gmail.com</a>.</p>
+        </section>
+    </main>
+
 </body>
 </html>
